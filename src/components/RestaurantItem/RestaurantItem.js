@@ -9,11 +9,20 @@ const RestaurantItem = ({ restaurant }) => {
         }}
         style={styles.image}
       />
-      <Text style={styles.title}>{restaurant.name}</Text>
-      <Text style={styles.subtitle}>
-        ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
-        {restaurant.maxDeliveryTime} minutes
-      </Text>
+
+      <View style={styles.infoContainer}>
+        <View>
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <Text style={styles.subtitle}>
+            ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
+            {restaurant.maxDeliveryTime} minutes
+          </Text>
+        </View>
+
+        <View style={styles.ratingContainer}>
+          <Text>{restaurant.rating}</Text>
+        </View>
+      </View>
     </View>
   )
 }
@@ -35,6 +44,19 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     color: 'grey'
+  },
+  infoContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  ratingContainer: {
+    marginLeft: 'auto',
+    backgroundColor: 'lightgray',
+    width: 30,
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20
   }
 })
 
