@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import RestaurantItem from './src/components/RestaurantItem/RestaurantItem'
 import restaurantsData from './assets/data/restaurants.json'
 
