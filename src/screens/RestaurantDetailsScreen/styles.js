@@ -22,7 +22,12 @@ export default StyleSheet.create({
     marginVertical: 10
   },
   subtitle: {
-    color: 'gray',
+    color: '#525252',
     fontSize: 15
+  },
+  menuTitle: {
+    marginVertical: 20,
+    fontSize: 18,
+    letterSpacing: 0.7
   }
 })
